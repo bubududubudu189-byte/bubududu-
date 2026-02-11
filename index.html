@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Forever</title>
+<style>
+body{
+  height:100vh;
+  margin:0;
+  background:#fff5f8;
+  font-family:Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+.box{
+  text-align:center;
+}
+h2{
+  margin-bottom:30px;
+}
+button{
+  background:orange;
+  color:white;
+  border:none;
+  padding:12px 28px;
+  font-size:18px;
+  border-radius:30px;
+  cursor:pointer;
+}
+.yes span{
+  display:inline-block;
+  animation:blink 1s infinite;
+}
+@keyframes blink{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+  100%{transform:scale(1)}
+}
+#no{
+  position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Will you be my person forever ♾️🫶?</h2>
+
+  <button class="yes" onclick="location.href='thanks.html'">
+    Yes <span>❤️</span>
+  </button>
+
+  &nbsp;&nbsp;&nbsp;
+
+  <button id="no">No 💔</button>
+</div>
+
+<script>
+document.getElementById("no").onclick=function(){
+  this.style.position="absolute";
+  this.style.left=Math.random()*(window.innerWidth-120)+"px";
+  this.style.top=Math.random()*(window.innerHeight-60)+"px";
+}
+</script>
+
+</body>
+</html>
